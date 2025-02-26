@@ -60,3 +60,16 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit --amend -m 'crea
  create mode 100644 test3.md
  create mode 100644 test4.md
 ```
+## 2.Editind Commit History
+
+```bash 
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git rebase -i HEAD~2
+
+[detached HEAD 3cb9bc9] Create second file
+ Date: Wed Feb 26 11:36:48 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/ft/edit-commit-history.
+
+```
