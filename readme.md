@@ -233,4 +233,65 @@ shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git co
 [detached HEAD 91b50ee] added 1.1 answer to the readme.md file
  Author: gasanashema <shemaphilbert8@gmail.com>
  Date: Wed Feb 26 15:15:53 2025 +0200
- ```
+
+```
+
+## 5. Advenced Squashing
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline
+2071eaa (HEAD -> advanced-squash, origin/dev, dev) Merge pull request #8 from gasanashema/ft/split
+057314e (origin/ft/split) Split commit
+0bec9d8 spliting a commit
+91b50ee added 1.1 answer to the readme.md file
+c23ccc6 Create files
+7df66c2 create fourth file
+05f9a08 create third file
+c496aae (origin/ft/split-commit) feat: Keeping History Tidy - Squashing Commits
+cb51692 (origin/ft/squashing) 1.3 Keeping History Tidy - Squashing Commits
+fc6b384 Create files
+8b513cd added answer 1.2 to the readme.md
+8963e21 Merge pull request #2 from gasanashema/ft/edit-commit-history
+5ab7534 added 1.1 answer to the readme.md file
+3cb9bc9 Create second file
+b44aa46 added 1.1 answer to the readme.md file
+d28423c create third and fourth file
+f689a4e chore: Create another file
+0812f48 chore: Create initial file
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ ^C
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git rebase -i 05f9a08^
+[detached HEAD 259e319] create third and fourth file
+ Date: Mon Mar 3 11:24:20 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+interactive rebase in progress; onto f689a4e
+Last commands done (6 commands done):
+   pick 0bec9d8 spliting a commit
+   pick d28423c create third and fourth file
+  (see more in file .git/rebase-merge/done)
+Next commands to do (5 remaining commands):
+   pick fc6b384 Create files
+   pick b44aa46 added 1.1 answer to the readme.md file
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'advanced-squash' on 'f689a4e'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+Could not apply d28423c... create third and fourth file
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline --graph --decorate
+* 3ca3995 (HEAD) spliting a commit
+* fd66353 added 1.1 answer to the readme.md file
+* c750b59 Create files
+* 259e319 create third and fourth file
+* f689a4e chore: Create another file
+* 0812f48 chore: Create initial file
+
+```
