@@ -418,3 +418,42 @@ shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git co
 shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git push origin 
 
 ```
+
+## 8. Cherry Picking
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ touch test5.md
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git add .
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git commit -m 'Implemented test 5'
+[ft/branch a037941] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline
+a037941 (HEAD -> ft/branch) Implemented test 5
+da8743e (origin/dev, dev) Merge pull request #19 from gasanashema/reopen/ft
+6166aee (origin/reopen/ft) re-order commits
+870efbf re-order commits
+afe894e create third file
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git checkout dev
+Switched to branch 'dev'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git cherry-pick a037941
+[dev 0361f32] Implemented test 5
+ Date: Mon Mar 3 17:00:23 2025 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline
+0361f32 (HEAD -> dev) Implemented test 5
+da8743e (origin/dev) Merge pull request #19 from gasanashema/reopen/ft
+6166aee (origin/reopen/ft) re-order commits
+870efbf re-order commits
+afe894e create third file
+c04b9f8 Merge pull request #13 from gasanashema/ft/drop-commit
+1dca356 (origin/ft/drop-commit) Drop a commit
+4468e6a Merge pull request #12 from gasanashema/adv-squash
+cfbeedd (origin/adv-squash) advenced squash
+
+```
