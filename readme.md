@@ -510,3 +510,28 @@ shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git lo
 shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ 
 
 ```
+
+## 10. Understanding Reflogs
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git checkout -b reflog/ft
+Switched to a new branch 'reflog/ft'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git reflog
+4a06c2e (HEAD -> reflog/ft, origin/dev, dev) HEAD@{0}: checkout: moving from dev to reflog/ft
+4a06c2e (HEAD -> reflog/ft, origin/dev, dev) HEAD@{1}: pull --rebase origin dev: Fast-forward
+41e026a HEAD@{2}: checkout: moving from commit-history to dev
+1e1a407 (origin/commit-history) HEAD@{3}: commit: Visualizing commit history
+41e026a HEAD@{4}: checkout: moving from dev to commit-history
+41e026a HEAD@{5}: pull --rebase origin dev (finish): returning to refs/heads/dev
+41e026a HEAD@{6}: pull --rebase origin dev (start): checkout 41e026a6b7ea3c29fb1c458b8d4875c4344ab730
+0361f32 HEAD@{7}: checkout: moving from ft/branch to dev
+68a5236 (ft/branch) HEAD@{8}: commit: Cherry Picking
+a037941 HEAD@{9}: checkout: moving from dev to ft/branch
+0361f32 HEAD@{10}: cherry-pick: Implemented test 5
+da8743e HEAD@{11}: checkout: moving from ft/branch to dev
+a037941 HEAD@{12}: commit: Implemented test 5
+da8743e HEAD@{13}: checkout: moving from dev to ft/branch
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ 
+
+```
