@@ -295,3 +295,20 @@ shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git lo
 * 0812f48 chore: Create initial file
 
 ```
+## 6. Drop a commit
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git checkout -b ft/drop-commit
+Switched to a new branch 'ft/drop-commit'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ touch unwanted.txt
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git add .
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git commit -m 'Unwanted commit'
+[ft/drop-commit 4c78629] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git reset --hard HEAD~1
+HEAD is now at 4468e6a Merge pull request #12 from gasanashema/adv-squash
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$
+
+```
