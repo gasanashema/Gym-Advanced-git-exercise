@@ -457,3 +457,56 @@ c04b9f8 Merge pull request #13 from gasanashema/ft/drop-commit
 cfbeedd (origin/adv-squash) advenced squash
 
 ```
+
+## 9. Visualizing Commit History
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git checkout -b commit-history
+Switched to a new branch 'commit-history'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --graph
+*   commit 41e026a6b7ea3c29fb1c458b8d4875c4344ab730 (HEAD -> commit-history, origin/dev, dev)
+|\  Merge: da8743e 68a5236
+| | Author: shema <106100022+gasanashema@users.noreply.github.com>
+| | Date:   Mon Mar 3 17:22:41 2025 +0200
+| | 
+| |     Merge pull request #20 from gasanashema/ft/branch
+| |     
+| |     Cherry Picking
+| | 
+| * commit 68a5236de8a185d99540595b2665bcaa01d968e1 (ft/branch)
+| | Author: Shema <shemaphilbert8@gmail.com>
+| | Date:   Mon Mar 3 17:20:34 2025 +0200
+| | 
+| |     Cherry Picking
+| | 
+| * commit a03794181c6f5418ae20be4a9d5d412a221a1ed9
+|/  Author: Shema <shemaphilbert8@gmail.com>
+|   Date:   Mon Mar 3 17:00:23 2025 +0200
+|   
+|       Implemented test 5
+|   
+*   commit da8743e8a75e5840d1e7ee2aece428621e47c36c
+|\  Merge: c04b9f8 6166aee
+| | Author: shema <106100022+gasanashema@users.noreply.github.com>
+| | Date:   Mon Mar 3 16:40:53 2025 +0200
+| | 
+| |     Merge pull request #19 from gasanashema/reopen/ft
+| |     
+| |     Re-order commits
+| |   
+| *   commit 6166aeef695f1afde3e7ed346131cf7ca6981ac1 (origin/reopen/ft)
+| |\  Merge: 870efbf c04b9f8
+| |/  Author: Shema <shemaphilbert8@gmail.com>
+|/|   Date:   Mon Mar 3 16:19:58 2025 +0200
+| |   
+| |       re-order commits
+| |   
+* |   commit c04b9f83cf4b4924cd9f91ebbd3d101e0899aaf0
+|\ \  Merge: 4468e6a 1dca356
+| | | Author: shema <106100022+gasanashema@users.noreply.github.com>
+| | | Date:   Mon Mar 3 14:03:56 2025 +0200
+| | | 
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ 
+
+```
