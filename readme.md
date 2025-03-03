@@ -310,5 +310,111 @@ shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git co
 shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git reset --hard HEAD~1
 HEAD is now at 4468e6a Merge pull request #12 from gasanashema/adv-squash
 shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$
+```
+
+## 7. Re-order commits
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline
+c04b9f8 (HEAD -> ft/reorder-commits, origin/dev, dev) Merge pull request #13 from gasanashema/ft/drop-commit
+1dca356 (origin/ft/drop-commit) Drop a commit
+4468e6a Merge pull request #12 from gasanashema/adv-squash
+cfbeedd (origin/adv-squash) advenced squash
+5c5a133 advenced spuash
+3ca3995 spliting a commit
+fd66353 added 1.1 answer to the readme.md file
+c750b59 Create files
+259e319 create third and fourth file
+2071eaa (origin/advanced-squash) Merge pull request #8 from gasanashema/ft/split
+057314e (origin/ft/split) Split commit
+0bec9d8 spliting a commit
+91b50ee added 1.1 answer to the readme.md file
+c23ccc6 Create files
+7df66c2 create fourth file
+05f9a08 create third file
+c496aae (origin/ft/split-commit) feat: Keeping History Tidy - Squashing Commits
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git rebase -i 5c5a133^
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+interactive rebase in progress; onto 3ca3995
+Last commands done (2 commands done):
+   pick 5c5a133 advenced spuash
+   pick 7df66c2 create fourth file
+Next commands to do (11 remaining commands):
+   pick 05f9a08 create third file
+   pick c23ccc6 Create files
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'ft/reorder-commits' on '3ca3995'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+Could not apply 7df66c2... create fourth file
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git log --oneline
+5c5a133 (HEAD) advenced spuash
+3ca3995 spliting a commit
+fd66353 added 1.1 answer to the readme.md file
+c750b59 Create files
+259e319 create third and fourth file
+f689a4e chore: Create another file
+0812f48 chore: Create initial file
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git commit
+interactive rebase in progress; onto 3ca3995
+Last commands done (2 commands done):
+   pick 5c5a133 advenced spuash
+   pick 7df66c2 create fourth file
+Next commands to do (11 remaining commands):
+   pick 05f9a08 create third file
+   pick c23ccc6 Create files
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'ft/reorder-commits' on '3ca3995'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git rebase skip
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git rebase --continue
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+interactive rebase in progress; onto 3ca3995
+Last commands done (3 commands done):
+   pick 7df66c2 create fourth file
+   pick 05f9a08 create third file
+  (see more in file .git/rebase-merge/done)
+Next commands to do (10 remaining commands):
+   pick c23ccc6 Create files
+   pick 91b50ee added 1.1 answer to the readme.md file # empty
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'ft/reorder-commits' on '3ca3995'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+Could not apply 05f9a08... create third file
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git commit --allow-empty
+[detached HEAD afe894e] create third file
+ Date: Mon Mar 3 11:24:20 2025 +0200
+shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ git push origin 
 
 ```
