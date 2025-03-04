@@ -664,3 +664,40 @@ Fast-forward
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+
+## 8.Branch Rebasing
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout ft/branch-from-commit 
+
+Switched to branch 'ft/branch-from-commit'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git rebase dev
+Successfully rebased and updated refs/heads/ft/branch-from-commit.
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
+
+## 9. Branch Rename
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git pull --rebase origin dev
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 910 bytes | 455.00 KiB/s, done.
+From github.com:gasanashema/Gym-Advanced-git-exercise
+ * branch            dev        -> FETCH_HEAD
+   3ab916c..e195e85  dev        -> origin/dev
+Updating 3ab916c..e195e85
+Fast-forward
+ readme.md | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch -m ft/branch-from-commit ft/improved-branch-name
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %       
+
+```
