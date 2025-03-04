@@ -904,3 +904,16 @@ Switched to branch 'dev'
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+## 7. Ignoring Files/directories
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % touch .gitignore
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % touch ignored.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'ignoring files'
+[dev 99382d1] ignoring files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+```
