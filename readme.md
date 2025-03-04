@@ -932,3 +932,15 @@ To github.com:gasanashema/Gym-Advanced-git-exercise.git
  * [new tag]         v1.0 -> v1.0
 
 ```
+
+## 8. Listing and deleting tags
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git tag
+v1.0
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git tag -d v1.0
+Deleted tag 'v1.0' (was 7ca17b8)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
