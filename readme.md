@@ -844,3 +844,63 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'conflicts re
 [ft/improved-branch-name 0ec127a] conflicts resolved
 
 ```
+
+## 5.Understanding Detached HEAD State
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git log --oneline   
+3fbcb82 (HEAD -> dev, origin/dev) Resolving Merge Conflicts with a Merge Tool
+7d73e47 Merge pull request #31 from gasanashema/ft/improved-branch-name
+c6f2d9c (origin/ft/improved-branch-name, ft/improved-branch-name) conflicts resolved
+0ec127a conflicts resolved
+aefb291 added message also to make conflicts
+1be0faf added message
+5d1e81d Stashing
+44b2d68 Merge pull request #30 from gasanashema/new-branch-from-detached
+ac17922 (origin/new-branch-from-detached, new-branch-from-detached) Checking Out Detached HEAD
+2ed4c84 Merge branch 'ft/improved-branch-name' into new-branch-from-detached
+643649e Testing detached HEAD
+e3e9a4a Merge pull request #29 from gasanashema/ft/improved-branch-name
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout 1be0faf
+Note: switching to '1be0faf'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1be0faf added message
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+error: Your local changes to the following files would be overwritten by checkout:
+        readme.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'unwanted changes'
+[detached HEAD a415c58] unwanted changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  a415c58 unwanted changes
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> a415c58
+
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
