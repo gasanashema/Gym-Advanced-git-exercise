@@ -644,3 +644,23 @@ Switched to a new branch 'ft/branch-from-commit'
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+## 7. Branch Merging
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch
+  dev
+* ft/branch-from-commit
+  main
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git merge dev
+Already up to date.
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git merge ft/branch-from-commit
+Updating 3b47e81..9c39886
+Fast-forward
+ readme.md | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
