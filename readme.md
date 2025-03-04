@@ -598,3 +598,21 @@ From github.com:gasanashema/Gym-Advanced-git-exercise
    d28423c..9bf8d36  main       -> origin/main
 
 ```
+## 5. Branch Deletion
+
+```bash
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git pull --rebase origin dev
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 911 bytes | 455.00 KiB/s, done.
+From github.com:gasanashema/Gym-Advanced-git-exercise
+ * branch            dev        -> FETCH_HEAD
+   bcdbc73..e8830ac  dev        -> origin/dev
+Successfully rebased and updated refs/heads/dev.
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch -D ft/new-feature
+Deleted branch ft/new-feature (was efce9a1).
+```
