@@ -701,3 +701,58 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch -m ft/branch-fro
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %       
 
 ```
+
+## 10.Checking Out Detached HEAD
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git log --oneline
+e3e9a4a (HEAD -> dev, origin/dev) Merge pull request #29 from gasanashema/ft/improved-branch-name
+004d112 (origin/ft/improved-branch-name, ft/improved-branch-name) Branch Rename
+e195e85 Merge pull request #28 from gasanashema/ft/branch-from-commit
+898fbee (origin/ft/branch-from-commit) Branch Rebasing
+3ab916c Merge pull request #27 from gasanashema/ft/branch-from-commit
+0e97121 Merging Branches
+17a5fcc Merge pull request #26 from gasanashema/ft/branch-from-commit
+9c39886 Creating a branch from a commit
+3b47e81 Branch Deletion
+a97a3a2 Updated project readme
+e8830ac Merge pull request #25 from gasanashema/ft/new-feature
+efce9a1 (origin/ft/new-feature) Local vs Remote
+326d887 working on feature branch
+241fe5e Implemented core functionality for new feature
+48d11cf Feature Branch Creation
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout 0e97121
+Note: switching to '0e97121'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0e97121 Merging Branches
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git status
+HEAD detached at 0e97121
+nothing to commit, working tree clean
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % echo "Temporary changes" >> temp.txt
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add temp.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m "Testing detached HEAD"
+[detached HEAD 643649e] Testing detached HEAD
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temp.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout -b new-branch-from-detached
+Switched to a new branch 'new-branch-from-detached'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %     
+
+```
