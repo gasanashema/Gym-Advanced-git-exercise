@@ -904,7 +904,7 @@ Switched to branch 'dev'
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
-## 7. Ignoring Files/directories
+## 6. Ignoring Files/directories
 
 ```bash
 
@@ -915,5 +915,20 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'ignoring fil
 [dev 99382d1] ignoring files
  1 file changed, 1 insertion(+)
  create mode 100644 .gitignore
+
+```
+
+## 7. Working with Tags
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git tag v1.0
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git tag
+v1.0
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git push origin v1.0
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:gasanashema/Gym-Advanced-git-exercise.git
+ * [new tag]         v1.0 -> v1.0
 
 ```
