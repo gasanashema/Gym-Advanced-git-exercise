@@ -547,3 +547,16 @@ Switched to a new branch 'ft/new-feature'
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+## 2. Working on the Feature Branch
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % echo 'hello world'>feature.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'Implemented core functionality for new feature'
+[ft/new-feature 241fe5e] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
