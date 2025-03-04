@@ -756,3 +756,29 @@ Switched to a new branch 'new-branch-from-detached'
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %     
 
 ```
+
+# Part 3: Advanced Workflows (10+ Challenges)
+## 1.Stashing Changes
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git stash
+Saved working directory and index state WIP on dev: 44b2d68 Merge pull request #30 from gasanashema/new-branch-from-detached
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
+
+## 2.Retrieving Stashed Changes
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git stash pop
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (1421a886d606e2dbe8c954262598aae33379fb97)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
