@@ -664,3 +664,16 @@ Fast-forward
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+
+## 8.Branch Rebasing
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout ft/branch-from-commit 
+
+Switched to branch 'ft/branch-from-commit'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git rebase dev
+Successfully rebased and updated refs/heads/ft/branch-from-commit.
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
