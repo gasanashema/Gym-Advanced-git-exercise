@@ -616,3 +616,31 @@ Successfully rebased and updated refs/heads/dev.
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch -D ft/new-feature
 Deleted branch ft/new-feature (was efce9a1).
 ```
+
+## 6. Creating a branch from commit
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git log --oneline
+3b47e81 (HEAD -> dev, origin/dev) Branch Deletion
+a97a3a2 Updated project readme
+e8830ac Merge pull request #25 from gasanashema/ft/new-feature
+efce9a1 (origin/ft/new-feature) Local vs Remote
+326d887 working on feature branch
+241fe5e Implemented core functionality for new feature
+48d11cf Feature Branch Creation
+bcdbc73 Merge pull request #23 from gasanashema/reflog/ft
+1dfc03b Understanding reflogs
+4a06c2e Merge pull request #22 from gasanashema/commit-history
+1e1a407 Visualizing commit history
+41e026a Merge pull request #20 from gasanashema/ft/branch
+68a5236 Cherry Picking
+a037941 Implemented test 5
+da8743e Merge pull request #19 from gasanashema/reopen/ft
+6166aee re-order commits
+870efbf re-order commits
+afe894e create third file
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout -b ft/branch-from-commit 326d887
+Switched to a new branch 'ft/branch-from-commit'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
