@@ -560,3 +560,41 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'Implemented 
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+
+## 3. Switching Back and Making More Changes
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % echo 'some content here'>readme.txt
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'Updated project readme'
+[dev aa838cc] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+```
+
+## 4. Local vs. Remote Branches
+
+```bash 
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git branch -r     
+
+  origin/dev
+  origin/ft/edit-commit-history
+  origin/ft/new-feature
+  origin/ft/split-commit
+  origin/main
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git fetch origin
+
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+remote: Enumerating objects: 5, done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 5 (from 1)
+Unpacking objects: 100% (5/5), 4.30 KiB | 733.00 KiB/s, done.
+From github.com:gasanashema/Gym-Advanced-git-exercise
+ * [new branch]      ft/branch  -> origin/ft/branch
+   d28423c..9bf8d36  main       -> origin/main
+
+```
