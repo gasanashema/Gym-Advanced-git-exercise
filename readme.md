@@ -1,4 +1,4 @@
-# 1.Refinig git history
+# Part 1: Refining Git History (10 Challenges)
 ##  1. Missing file fix
 ```bash
 gymgukunda@Gukundas-iMac TG-Shema-Projects % git clone git@github.com:gasanashema/Gym-Advanced-git-exercise.git
@@ -533,5 +533,17 @@ da8743e HEAD@{11}: checkout: moving from ft/branch to dev
 a037941 HEAD@{12}: commit: Implemented test 5
 da8743e HEAD@{13}: checkout: moving from dev to ft/branch
 shema@shema:~/New Volume data/The Gym/Projects/Gym-Advanced-git-exercise$ 
+
+```
+
+# Part 2: Branching Basics (10 Challenges)
+
+## 1.Feature Branch Creation
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
