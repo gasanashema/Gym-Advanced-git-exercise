@@ -784,3 +784,33 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %
 #comment
 #not a comment
 ```
+## 3.Branch Merging Conflicts (Continued)
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+M       readme.md
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout ft/improved-branch-name
+Switched to branch 'ft/improved-branch-name'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'added message'
+[ft/improved-branch-name 1be0faf] added message
+ 1 file changed, 1 insertion(+)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout dev
+Switched to branch 'dev'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'added message also to make conflicts'
+[dev aefb291] added message also to make conflicts
+ 1 file changed, 1 insertion(+)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git checkout ft/improved-branch-name                
+Switched to branch 'ft/improved-branch-name'
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git merge dev                                       
+Auto-merging readme.md
+CONFLICT (content): Merge conflict in readme.md
+Automatic merge failed; fix conflicts and then commit the result.
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m 'conflicts resolved'
+[ft/improved-branch-name 0ec127a] conflicts resolved
+
+```
