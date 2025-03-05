@@ -966,4 +966,7 @@ To github.com:gasanashema/Gym-Advanced-git-exercise.git
    37e37fd..0ff2b64  dev -> dev
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %
 
+#added some changes
+here
+
 ```
