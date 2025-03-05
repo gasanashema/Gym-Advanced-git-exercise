@@ -944,3 +944,26 @@ Deleted tag 'v1.0' (was 7ca17b8)
 gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
 
 ```
+
+## 9. Pushing Local Work to Remote Repositories
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git add .
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git commit -m ' Listing and deleting tags'
+[dev 0ff2b64]  Listing and deleting tags
+ 1 file changed, 12 insertions(+)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git push origin dev
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasanashema/Gym-Advanced-git-exercise.git
+   37e37fd..0ff2b64  dev -> dev
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %
+
+```
