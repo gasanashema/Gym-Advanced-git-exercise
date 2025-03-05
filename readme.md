@@ -970,3 +970,24 @@ gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise %
 here
 
 ```
+## 10. Pulling Changes from Remote Repositories
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % git pull --rebase origin dev
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_rsa': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+Unpacking objects: 100% (3/3), 7.45 KiB | 1.49 MiB/s, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+From github.com:gasanashema/Gym-Advanced-git-exercise
+ * branch            dev        -> FETCH_HEAD
+   abf7eb7..dadb27f  dev        -> origin/dev
+Updating abf7eb7..dadb27f
+Fast-forward
+ readme.md | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+gymgukunda@Gukundas-iMac Gym-Advanced-git-exercise % 
+
+```
